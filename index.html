@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marcus Heine</title>
   <link rel="stylesheet" href="css/main_css.css">
   <link rel="icon" href="images/favicon.ico">
+  <script src="js/jquery.min.js"></script>
 </head>
 
  <body>
+
+ 	<div id="container">
 
  		<section id=header>
  			Marcus Heine
@@ -25,7 +29,7 @@
 		</section>
 
 		<section id=main>
-			<!-- <img src="images/sw_logov2.png"/> -->
+			<div class="main-text">
 
 			My name is Marcus Heine and I am a student at KTH <br>
 			(The Royal Institute of Technology)	in Stockholm, <br>
@@ -39,11 +43,16 @@
 
 			If you're interested you can contact me by <a href="mailto:marcus.r.heine@gmail.com">mail</a>, and my <br>
 			CV is available in either <a href="files/cv_sv.pdf" target="_blank">Swedish</a> or <a href="files/cv_en.pdf" target="_blank">English</a>.
+			</div>
 		</section>
 
 		<section id=portrait>
-			<img src="images/mm.png" height=320px/>
+			<img id="m-image" src="images/mm.png"/>
 		</section>
+
+		</div>
+
+		<script src="js/script.js"></script>
 	
 </body>
 
