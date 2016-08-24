@@ -1,14 +1,14 @@
 @font-face
 {
-font-family: Source;
-src: url('../fonts/SourceSansPro-Light.ttf.woff');
+	font-family: Source;
+	src: url('../fonts/SourceSansPro-Light.ttf.woff');
 
 }
 
 @font-face
 {
-font-family: Sketch;
-src: url('../fonts/SketchRockwell-Bold.ttf');
+	font-family: Sketch;
+	src: url('../fonts/SketchRockwell-Bold.ttf');
 
 }
 
@@ -22,7 +22,14 @@ a:active {color:#CCCCCC;}
 body {
 	background:url('../images/background.png');
 	width: 100%;
-	margin: 0 auto;	
+	text-align: center;	
+}
+
+#container {
+		display: inline-block;
+		text-align: center;
+		width: 1000px;
+		margin: 0px auto;
 }
 
 /* Handles the 'Marcus Heine' and sets the correct font */
@@ -33,27 +40,27 @@ body {
 	color: #A0A0A0;
 
 	margin-top: 100px;
+	margin-bottom: 30px;
 	width: 100%;
 }
 
 
 /* Handle navigation social icons */
 #nav {
-	float: left;
-	margin-left: 25px;
-	margin-top: 30px;
+	display: inline-block;
+	vertical-align: top;
 }
 
-	/* Handle icon coloring transition*/
-	#nav a:link {
-		opacity: 0.5;
-		transition: opacity .3s ease-in-out;
-	}
+/* Handle icon coloring transition*/
+#nav a:link {
+	opacity: 0.5;
+	transition: opacity .3s ease-in-out;
+}
 
-	/* When hovering over the icon, make it completely opaque */
-	#nav a:hover {
-		opacity: 1;
-	}
+/* When hovering over the icon, make it completely opaque */
+#nav a:hover {
+	opacity: 1;
+}
 
 /* Handles list items; since the navigation bar is made up of items */
 ul
@@ -65,10 +72,9 @@ ul
 
 /* Handles the main text body */
 #main  {
-	margin-top: 30px;
+	display: inline-block;
 	margin-left: 2%;
-	float: left;
-	width: 450px;
+	vertical-align: top;
 
 	color: white;
 	font-family: Source;
@@ -91,11 +97,10 @@ li.social_icons { margin-bottom: 16px; }
 
 /* Handles portrait image */
 #portrait {
-	max-height: 325px;
-	float: left;
-	margin-top: 30px;
+	display: inline-block;
 	margin-left: 10px;
 	color: #444444;
+	vertical-align: top;
 }
 
 
@@ -121,55 +126,55 @@ footer
 
 	#nav {
 		display: inline-block;
-    	text-align: center;
-    	margin:10px auto;
-    	float: none;
-    	width: 90%;
-    }
+		text-align: center;
+		margin:10px auto;
+		float: none;
+		width: 90%;
+	}
 
-    ul {
-    	display: inline;
-    }
+	ul {
+		display: inline;
+	}
 
-    li {
-    	display: inline;
-    	margin-left: 2%;
-    	margin-right: 2%;
-    }
+	li {
+		display: inline;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
 
-     #portrait {
-    	display: inline-block;
-    	text-align: center;
-    	margin: 0px auto;
-    	width: 100%;
-    }
+	#portrait {
+		display: inline-block;
+		text-align: center;
+		margin: 0px auto;
+		width: 100%;
+	}
 
-    #portrait  img {
-    	display: inline-block;
-    	text-align: center;
-    	margin: 20px auto;
-    	float: none;
-    	width: 85%;
-    	padding-bottom: 20px;
-    }
-
-
-    #header {
-    	margin: 20px auto 0px auto;
-    	width: 80%;
-    	text-align: center;
-    }
+	#portrait  img {
+		display: inline-block;
+		text-align: center;
+		margin: 20px auto;
+		float: none;
+		width: 85%;
+		padding-bottom: 20px;
+	}
 
 
-    #main {
-    	display: inline-block;
-    	text-align: center;
-    	float: none;
-    	width: 80%;
-    	margin:0px auto;
-    }
+	#header {
+		margin: 20px auto 0px auto;
+		width: 80%;
+		text-align: center;
+	}
 
-    .main-text {
+
+	#main {
+		display: inline-block;
+		text-align: center;
+		float: none;
+		width: 80%;
+		margin:0px auto;
+	}
+
+	.main-text {
 		display: inline-block;
 		text-align: left;
 		width: auto;
