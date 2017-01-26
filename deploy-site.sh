@@ -13,3 +13,5 @@ sshpass -e rsync --recursive --progress js/ mheine.se@ssh.mheine.se:/www/js/ | t
 sshpass -e rsync --recursive --progress index.html mheine.se@ssh.mheine.se:/www/ | tail -n +2
 
 echo "Transfer successful!"
+
+
