@@ -91,9 +91,13 @@ ul
 	border-radius: 10px;
 }
 
+.main-text {
+	width: 550px;
+}
+
 
 /* Ensure space between icons in the list*/
-li.social_icons { margin-bottom: 16px; }
+li.social_icons { margin-bottom: 70%; }
 
 /* Handles portrait image */
 #portrait {
@@ -129,7 +133,7 @@ footer
 		text-align: center;
 		margin:10px auto;
 		float: none;
-		width: 90%;
+		width: 80%;
 	}
 
 	ul {
@@ -138,8 +142,8 @@ footer
 
 	li {
 		display: inline;
-		margin-left: 2%;
-		margin-right: 2%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 
 	#portrait {
@@ -171,7 +175,7 @@ footer
 		text-align: center;
 		float: none;
 		width: 80%;
-		margin:0px auto;
+		margin: 0px auto;
 	}
 
 	.main-text {
