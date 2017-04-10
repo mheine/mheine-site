@@ -1,5 +1,15 @@
+window.onload = function() {
+  mobileResize();
+};
+
+
 
 $( window ).resize(function() {
+	mobileResize();
+});
+
+
+function mobileResize() {
 	var $header = $("#header");
 
 	if (parseInt($header.css("font-size")) < 36) {
@@ -12,6 +22,5 @@ $( window ).resize(function() {
 		$nav.css({ "width": "160px" });   
 
 	else 
-		$nav.css({ "width": "auto" });   
-
-});
+		$nav.css({ "width": "auto" });  
+}
