@@ -1,0 +1,295 @@
+@font-face
+{
+	font-family: Bebas;
+	src: url('../fonts/BEBAS.ttf');
+
+}
+
+@font-face
+{
+	font-family: Edo;
+	src: url('../fonts/edosz.ttf');
+
+}
+
+a:link {color:#113388;}
+a:visited {color:#113388;} 
+a:hover {color:#3366BB;} 
+a:active {color:#CCCCCC;}
+
+/* === TITLE ===*/
+#section-title {
+	background-image: url('../images/space-large.jpeg');
+	background-size: 100%;
+	text-align: center;
+}
+
+#title {
+	color: #DDD;
+	font-size: 72px;
+	font-family: Edo;
+}
+
+#byline {
+	color: #AAA;
+	font-size: 40px;
+	font-family: Bebas;
+
+	margin-top: 2%;
+}
+
+.title-icon {
+	height: 50px;
+	width: auto;
+	filter: invert(0%);
+}
+
+.icon-listing {
+	display: inline-block;
+
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.icon-item {
+	display: inline-block;
+	font-size: 16px;
+}
+
+
+/* === ABOUT ME ===*/
+#section-about {
+	background-image: url('../images/self-large.jpg');
+	background-size: 100%;
+}
+
+#about-content {
+	margin-left: 20%;
+}
+
+#about-header {
+	color: #444;
+	font-size: 50px;
+	font-family: Edo;
+
+	margin-top: 2%;
+}
+
+
+.listing {
+	position: relative;
+
+	margin-bottom: 10px;
+	max-width: 500px;
+}
+
+
+
+#list-text {
+	display: inline-block;
+	margin-left: 35px;
+
+	font-size: 16px;
+	vertical-align: top;
+}
+
+#list-icon {
+	display: inline;
+	position: absolute;
+	top: 3px; 
+	vertical-align: top;
+}
+
+/* === PROJECTS ===*/
+#section-projects {
+	text-align: center;
+}
+
+#projects-title-container {
+	position: absolute;
+	top: 12%;
+	left: 12%;
+	z-index: 3;
+	max-width: 500px;
+}
+
+#projects-header {
+	background-color: transparent;
+	color: #3277E4;
+
+	font-size: 50px;
+	font-family: Edo;
+
+}
+
+#slide1 {
+	background-image: url('../images/keyboard-large-v2.jpg');
+	background-size: 100%;
+}
+
+#slide2 {
+	background-image: url('../images/raspberries-large.jpg');
+	background-size: 100%;
+}
+
+#slide3 {
+	background-image: url('../images/blackboard-large.jpg');
+	background-size: 100%;
+}
+
+#slide4 {
+	background-image: url('../images/airport-large.jpeg');
+	background-size: 100%;
+}
+
+
+.projects-content-item {
+	width: 100%;
+}
+
+.item-text-content {
+
+	display: inline-block;
+	vertical-align: top;
+
+	font-family: Lato;
+	font-weight: 500;
+	font-size: 16px;
+	text-align: left;
+
+	max-width: 500px;
+	max-height: 290px;
+
+	border: 4px solid #333;
+	border-radius: 4px;
+
+	padding: 5px 10px;
+}
+
+.item-picture-content {
+	display: inline-block;
+
+	height: 100%;
+	vertical-align: top;
+}
+
+.project-picture {
+	max-height: 600px;
+	border: 4px solid #333;
+	border-radius: 4px;
+}
+
+.project-picture img {
+	width: auto;
+}
+
+/* Spectra */
+#item-container-spectra {
+	color: #CCC;
+}
+
+#item-title-spectra {
+	/* text-align: left; */
+	font-size: 40px;
+	font-family: Bebas;
+	color: #EEE;
+}
+
+#spectra-video {
+	border: 4px solid #333;
+	border-radius: 4px;
+}
+
+#spectra-text {
+	color: #CCCCCC;
+	height: 275px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
+	background-color: rgba(255,255,255,0.04);
+}
+
+/* RCAST */
+#item-container-rcast {
+	color: black;
+}
+
+#item-title-rcast {
+	/* text-align: left; */
+	font-size: 40px;
+	font-family: Bebas;
+	color: #113388;
+}
+
+#rcast-text {
+	color: #111133;
+	height: 270px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
+	background-color: rgba(255,255,255,0.4);
+}
+
+
+#rcast-video {
+	border: 4px solid #333;
+	border-radius: 4px;
+}
+
+
+/* Studs */
+#item-container-studs {
+	color: #112255;
+}
+
+#item-title-studs {
+	/* text-align: left; */
+	font-size: 40px;
+	font-family: Bebas;
+	color: #444;
+}
+
+#studs-text {
+	color: #333;
+	background-color: rgba(255,255,255,0.6);
+}
+
+/* Tutoring */
+#item-container-tutor {
+	color: #112255;
+}
+
+#item-title-tutor {
+	/* text-align: left; */
+	font-size: 40px;
+	font-family: Bebas;
+	color: #CCC;
+}
+
+#tutor-text {
+	color: #EEE;
+	background-color: rgba(0,0,0, 0.90);
+}
+
+#tutor-list li {
+	margin: 5px 0 5px 0;
+}
+
+
+/*=== NAVIGATION THEMES === */
+
+.fp-viewing-name #fp-nav ul li a span {
+	background: #AAA;
+}
+
+/* Pages navigation themes */
+.fp-viewing-projects-spectra #fp-nav ul li a span {
+	background: #DDD;
+}
+
+.fp-viewing-projects-studs #fp-nav ul li a span {
+	background: #444;
+}
+
+.fp-viewing-projects-rcast #fp-nav ul li a span {
+	background: #111;
+}
+
+.fp-controlArrow {
+	display: none;
+}
+

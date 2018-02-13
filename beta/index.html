@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Marcus Heine personal webpage on the Internet" />
+	<meta name="keywords"  content="marcus,heine,mheine,personal,programmer,ai,nlp" />
+
+	<title>Marcus Heine</title>
+
+	<link rel="icon" href="../images/favicon.ico">
+
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				//sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FBAD31'],
+				anchors: ['name', 'aboutMe', 'projects'],
+				slidesNavigation: true,
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['My name', 'About me', 'Projects'],
+				scrollOverflow: true,
+				menu: '#menu',
+				scrollingSpeed: 600
+			});
+
+			$("#studs-image").css('height', $('#studs-text').height() + 18);
+			$("#rcast-image").css('height', $('#rcast-text').height() + 18);
+			$("#tutor-image").css('height', $('#tutor-text').height() + 18);
+
+		});
+	</script>
+
+	<style type="text/css">
+	.fp-slidesNav.bottom{
+		bottom: 25px; 
+	}
+
+	.fp-slidesNav {
+		text-align: center;
+	}
+
+	/* Slides navigation themes */
+	.fp-viewing-projects-spectra .fp-slidesNav ul li a span {
+		background: #FFF;
+	}
+
+	.fp-viewing-projects-studs .fp-slidesNav ul li a span {
+		background: #444;
+	}
+
+	.fp-viewing-projects-rcast .fp-slidesNav ul li a span {
+		background: #111;
+	}
+</style>
+</head>
+
+<body>
+	<div id="fullpage">
+		<div class="section" id="section-title">
+			<div id="first-content">
+				<div id="title">Marcus Heine</div>
+				
+				<div id="contact-content">
+
+
+					<div class="icon-listing">
+						<div id="icon-item"><a href="mailto:mail@mheine.se" target="_top"><img class="title-icon" src="images/icon-mail.png"></a></div>
+					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item">
+							<a href="http://www.linkedin.com/pub/marcus-heine/77/377/503" target="_blank"><img class="title-icon" src="images/icon-linkedin.png"></a>
+						</div>
+					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item"><a href="https://github.com/mheine" target="_blank"><img class="title-icon" src="images/icon-github.png"></a></div>
+					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item"><a href="https://twitter.com/MarcusHeine" target="_blank"><img class="title-icon" src="images/icon-twitter.png"></a></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="section" id="section-about">
+			<div id="about-content">
+				<div id="about-header">
+					About me
+				</div>
+				<div class="listing">
+					<div id="list-icon"><img src="images/icon-education.png"></div>
+					<div id="list-text">Currently studying Computer Science @ KTH Royal Institute of Technology.</div>
+				</div>
+
+				<div class="listing">
+					<div id="list-icon"><img src="images/icon-work.png"></div>
+					<div id="list-text">Work experience includes developing software for <a href="www.dewire.com">Dewire</a> and non-profit work for <a href="www.datasektionen.se">Datasektionen</a>.</div>
+				</div>
+
+				<div class="listing">
+					<div id="list-icon"><img src="images/icon-programming.png"></div>
+					<div id="list-text">My preferred programming languages are Java and Python. Areas of specific interest are Natural Language Processing, Artificial Technology and Voice Recognition.</div>
+				</div>
+
+
+				<div class="listing">
+					<div id="list-icon"><img src="images/icon-heart.png"></div>
+					<div id="list-text">Some of my other hobbies include playing football, skateboarding and tinkering with my Raspberry Pi.</div>
+				</div>  
+
+				<div class="listing">
+					<div id="list-icon"><img src="images/icon-home.png"></div>
+					<div id="list-text">I currently live in Stockholm, Sweden.</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section" id="section-projects">
+			<div id="projects-title-container">
+				<div id="projects-header">Projects</div>
+			</div>
+
+			<div class="slide" id="slide1" data-anchor="spectra">
+				<div class="intro">
+
+					<div class="projects-content-item">
+						<div id="item-title-spectra">&#8618;&#xFE0E; Spectra</div>
+						
+						<div class="item-text-content" id="spectra-text">
+							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualiztions such as a pulsating ball with an external wireframe to show low and medium frequencey ranges, a color scheme to match the high notes, and an independent frequency equlizer to show the entire spectrum.
+							<br> <br>
+							The project was developed with two of my classmates, and the source code is available on GitHub.
+						</div>
+
+						<div class="item-picture-content">
+							<iframe
+							id="spectra-video" 
+							width="500"
+							height="275"
+							src="https://www.youtube.com/embed/saqd8fJADOU"
+							frameborder="0"
+							allowfullscreen>
+						</iframe>
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide" id="slide2" data-anchor="rcast">
+
+		<div class="projects-content-item">
+			<div id="item-title-rcast">&#8618;&#xFE0E; RaspberryCast</div>
+
+			<div class="item-text-content" id="rcast-text">
+				RaspberryCast is an open-source project for the Raspberry Pi, where you can transform your Raspberry Pi into a streaming device, and cast videos from your devices to a TV or external monitor. It supports a number of different types of streaming sites, there is an extension for both Chrome and Firefox, and there is an option to stream local video files to your Pi.
+				<br> <br>
+				The application was originally developed and maintained by Vincent Loewert (@vincelwt), and I have since made several contributions, as well as discussing the future of the project.
+			</div>
+
+			<div class="item-picture-content">
+				<!-- <img class="project-picture" id="rcast-image" src="images/keyboard-large.jpg"> -->
+				<iframe 
+				id="rcast-video" 
+				width="500" 
+				height="270"
+				src="https://www.youtube.com/embed/0wEcYPSm_f8"
+				frameborder="0"
+				allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide" id="slide3" data-anchor="tutoring">
+
+		<!--  The photo in this slide was taken by Peter Trägårdh and was taken from MyAcademys Press Kit. Available at http://www.mynewsdesk.com/se/myacademy/images/my-academys-nulaegesbedoemning-och-utvecklingsplan-474711 -->
+
+		<div class="projects-content-item">
+			<div id="item-title-tutor">&#8618;&#xFE0E; Tutoring</div>
+
+			<div class="item-text-content" id="tutor-text">
+				<ul id="tutor-list">
+					<li>Worked at MyAcademy for 4 years, where I was a study coach with focus on students taking natural science courses. </li>
+					<li>Held a series of lectures on Object-oriented Programming to the Computer Science students at Nacka Gymnasium.</li>
+					<li>Took part in a project group at the CSC School at KTH designed to teach younger children about code and programming.</li>
+					<li>Was a mentor at the reception for new students coming to Datasektionen at KTH for two years.</li>
+				</ul>
+			</div>
+
+			<div class="item-picture-content">
+				<img class="project-picture" id="tutor-image" src="images/my-academy-large.png">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="slide" id="slide4" data-anchor="studs">
+
+		<div class="projects-content-item">
+			<div id="item-title-studs">&#8618;&#xFE0E; Studs</div>
+
+			<div class="item-text-content" id="studs-text">
+				Studs, or the Study Trip, is an annual project at the Computer Science chapter at KTH. The project aims to create a platform for interaction between students close to graduation and relevant companies. The project ends with a study trip to give the students an opportunity to meet companies abroad.
+				<br> <br>
+				I was part of the project in 2017, where I was an event manager, handling communication between Studs and the companies in order to plan, attend, and evaluate the events with these companies, as well as making them as enjoyable and fruitful as possible.
+			</div>
+
+			<div class="item-picture-content">
+				<a href="images/studs-large.png"><img class="project-picture" id="studs-image" src="images/studs-large.png"></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>	
+</body>
+
+
+</html>
