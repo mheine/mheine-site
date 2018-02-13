@@ -24,6 +24,12 @@
 	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 
 	<script type="text/javascript">
+
+		var loc = window.location.href + '';
+		if (loc.indexOf('http://')==0) {
+			window.location.href = loc.replace('http://','https://');
+		}
+		
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				//sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FBAD31'],
