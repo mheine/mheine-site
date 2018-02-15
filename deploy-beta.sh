@@ -1,11 +1,16 @@
 #!/bin/bash
 
-read -s -p "Type your SSH password for mheine.se: " SSHPASS
-eval "export SSHPASS='""$SSHPASS""'"
+ssh -q mheine.se@ssh.mheine.se exit
+STATUS=$?
 
-echo ""
+if [[ "$STATUS" != 0 ]] ; then
+	echo "SSH connection refused. Please check the ssh keys."
+	exit 0
+fi
 
-sshpass -e rsync --recursive --progress beta/ mheine.se@ssh.mheine.se:/www/beta/ | tail -n +2
+echo "Starting transfer to beta.mheine.se"
+
+rsync --recursive --progress beta/ mheine.se@ssh.mheine.se:/www/beta/ | tail -n +2
 
 echo "Transfer successful!"
 
