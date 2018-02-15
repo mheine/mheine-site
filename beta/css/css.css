@@ -395,6 +395,6 @@ a:active {color:#CCCCCC;}
 }
 
 .fp-controlArrow {
-	display: none;
+	display: none !important;
 }
 
