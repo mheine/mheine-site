@@ -20,7 +20,7 @@ a:active {color:#CCCCCC;}
 /* === TITLE ===*/
 #section-title {
 	background-image: url('../images/space-large.jpeg');
-	background-size: 100%;
+	overflow: hidden;
 	text-align: center;
 }
 
@@ -59,8 +59,8 @@ a:active {color:#CCCCCC;}
 
 /* === ABOUT ME ===*/
 #section-about {
-	background-image: url('../images/self-large.jpg');
-	background-size: 100%;
+	background: url('../images/self-large-3k.png') no-repeat bottom right;
+	background-size: 100% auto; 
 }
 
 #about-content {
@@ -75,7 +75,6 @@ a:active {color:#CCCCCC;}
 	margin-top: 2%;
 }
 
-
 .listing {
 	position: relative;
 
@@ -83,9 +82,7 @@ a:active {color:#CCCCCC;}
 	max-width: 500px;
 }
 
-
-
-#list-text {
+.list-text {
 	display: inline-block;
 	margin-left: 35px;
 
@@ -93,11 +90,56 @@ a:active {color:#CCCCCC;}
 	vertical-align: top;
 }
 
-#list-icon {
+.list-icon {
 	display: inline;
 	position: absolute;
 	top: 3px; 
 	vertical-align: top;
+}
+
+/* === ABOUT ME MOBILE === */
+
+@media only screen and (max-width: 500px) {
+	#section-about {
+		background: url('../images/self-large-3k.png') no-repeat bottom right;
+		background-size: cover;
+	}
+
+	#about-content {
+		margin-left: 5%;
+		vertical-align: top;
+		width: 80%;
+	}
+
+	#about-header {
+		color: #444;
+		font-size: 30px;
+		font-family: Edo;
+	}
+
+	.list-text {
+		display: inline-block;
+		margin-left: 35px;
+
+		font-size: 12px;
+		vertical-align: top;
+		margin-top: 2px;
+	}
+
+	.list-icon {
+		display: inline;
+		position: absolute;
+		top: 3px; 
+		vertical-align: top;
+	}
+
+	#section-about .fp-tableCell {
+		vertical-align: top !important;
+	}
+
+	#fp-nav.right {
+		right: 2px !important;
+	}
 }
 
 /* === PROJECTS ===*/
@@ -107,7 +149,7 @@ a:active {color:#CCCCCC;}
 
 #projects-title-container {
 	position: absolute;
-	top: 12%;
+	top: 22%;
 	left: 12%;
 	z-index: 3;
 	max-width: 500px;
@@ -123,23 +165,23 @@ a:active {color:#CCCCCC;}
 }
 
 #slide1 {
-	background-image: url('../images/keyboard-large-v2.jpg');
-	background-size: 100%;
+	background: url('../images/keyboard-large-v2.jpg') no-repeat bottom right;
+	background-size: cover;
 }
 
 #slide2 {
-	background-image: url('../images/raspberries-large.jpg');
-	background-size: 100%;
+	background: url('../images/raspberries-large.jpg') no-repeat bottom right;
+	background-size: cover;
 }
 
 #slide3 {
-	background-image: url('../images/blackboard-large.jpg');
-	background-size: 100%;
+	background: url('../images/blackboard-large.jpg') no-repeat bottom right;
+	background-size: cover;
 }
 
 #slide4 {
-	background-image: url('../images/airport-large.jpeg');
-	background-size: 100%;
+	background: url('../images/airport-large.jpeg') no-repeat bottom right;
+	background-size: cover;
 }
 
 
@@ -157,8 +199,8 @@ a:active {color:#CCCCCC;}
 	font-size: 16px;
 	text-align: left;
 
-	max-width: 500px;
-	max-height: 290px;
+	width: 500px;
+	height: 275px;
 
 	border: 4px solid #333;
 	border-radius: 4px;
@@ -183,6 +225,38 @@ a:active {color:#CCCCCC;}
 	width: auto;
 }
 
+/* === PROJECTS MOBILE === */
+
+@media only screen and (max-width: 500px) {
+
+	#projects-title-container {
+		top: 5% !important;
+		left: 0% !important;
+		width: 100%;
+		text-align: center;
+	}
+
+	#projects-header {
+		display: inline-block;
+		font-size: 50px;
+	}
+	
+	.item-text-content {
+		font-size: 12px;
+		width: 85%;
+		height: auto;
+	}
+
+	.item-picture-content {
+		display: inline-block;
+
+		height: auto;
+		width: 80%;
+		vertical-align: top;
+	}
+}
+
+
 /* Spectra */
 #item-container-spectra {
 	color: #CCC;
@@ -203,7 +277,17 @@ a:active {color:#CCCCCC;}
 #spectra-text {
 	color: #CCCCCC;
 	height: 275px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
-	background-color: rgba(255,255,255,0.04);
+	background-color: rgba(0, 0, 0 , 0.8);
+}
+
+/* Spectra Mobile */
+@media only screen and (max-width: 500px) {
+	#spectra-text {
+		height: auto !important;
+		background-color: rgba(0, 0, 0 , 0.95);
+	}
+
+
 }
 
 /* RCAST */
@@ -212,22 +296,35 @@ a:active {color:#CCCCCC;}
 }
 
 #item-title-rcast {
-	/* text-align: left; */
 	font-size: 40px;
 	font-family: Bebas;
-	color: #113388;
+	color: #444;
 }
 
 #rcast-text {
 	color: #111133;
-	height: 270px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
-	background-color: rgba(255,255,255,0.4);
+	height: 275px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
+	background-color: rgba(255,255,255, 0.4);
 }
 
 
 #rcast-video {
 	border: 4px solid #333;
 	border-radius: 4px;
+}
+
+/* Rcast Mobile */
+@media only screen and (max-width: 500px) {
+
+	#item-title-rcast {
+	font-size: 30px;
+}
+	#rcast-text {
+		height: auto !important;
+		background-color: rgba(255, 255, 255 , 0.6);
+	}
+
+
 }
 
 
@@ -237,7 +334,6 @@ a:active {color:#CCCCCC;}
 }
 
 #item-title-studs {
-	/* text-align: left; */
 	font-size: 40px;
 	font-family: Bebas;
 	color: #444;
@@ -254,7 +350,6 @@ a:active {color:#CCCCCC;}
 }
 
 #item-title-tutor {
-	/* text-align: left; */
 	font-size: 40px;
 	font-family: Bebas;
 	color: #CCC;
@@ -266,7 +361,7 @@ a:active {color:#CCCCCC;}
 }
 
 #tutor-list li {
-	margin: 5px 0 5px 0;
+	margin: 5px 0 5px 0; 
 }
 
 
@@ -287,6 +382,10 @@ a:active {color:#CCCCCC;}
 
 .fp-viewing-projects-rcast #fp-nav ul li a span {
 	background: #111;
+}
+
+.fp-viewing-projects-tutoring #fp-nav ul li a span {
+	background: #EEE;
 }
 
 .fp-controlArrow {
