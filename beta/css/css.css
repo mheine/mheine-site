@@ -152,7 +152,6 @@ a:active {color:#CCCCCC;}
 	top: 22%;
 	left: 12%;
 	z-index: 3;
-	max-width: 500px;
 }
 
 #projects-header {
@@ -230,9 +229,10 @@ a:active {color:#CCCCCC;}
 @media only screen and (max-width: 500px) {
 
 	#projects-title-container {
-		top: 5% !important;
+		top: 0% !important;
 		left: 0% !important;
 		width: 100%;
+		height: auto;
 		text-align: center;
 	}
 
@@ -263,7 +263,6 @@ a:active {color:#CCCCCC;}
 }
 
 #item-title-spectra {
-	/* text-align: left; */
 	font-size: 40px;
 	font-family: Bebas;
 	color: #EEE;
@@ -317,14 +316,13 @@ a:active {color:#CCCCCC;}
 @media only screen and (max-width: 500px) {
 
 	#item-title-rcast {
-	font-size: 30px;
-}
+		font-size: 30px;
+	}
+
 	#rcast-text {
 		height: auto !important;
 		background-color: rgba(255, 255, 255 , 0.6);
 	}
-
-
 }
 
 
@@ -362,6 +360,14 @@ a:active {color:#CCCCCC;}
 
 #tutor-list li {
 	margin: 5px 0 5px 0; 
+}
+
+/* Tutoring Mobile */
+@media only screen and (max-width: 500px) {
+
+	#tutor-list  {
+		margin-left: -10% !important; 
+	}
 }
 
 

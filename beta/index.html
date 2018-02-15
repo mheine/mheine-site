@@ -29,24 +29,11 @@
 		if (loc.indexOf('http://')==0) {
 			window.location.href = loc.replace('http://','https://');
 		}
-
 		window.onload = function() {
 			$("#tutor-image").css('height', $('#tutor-text').height() + 18);
 			$("#studs-image").css('height', $('#studs-text').height() + 18);
 
 			mobile_content();
-
-			var winW = window.innerWidth;
-			var winH = window.innerHeight;
-
-			var leftDistance = $("#spectra-text").offset().left;
-			var topDistance = $("#spectra-text").offset().top - (2 * winH);
-
-			var pixelsW = leftDistance + "px";
-			var pixelsH = (topDistance - 70) + "px";
-
-			$("#projects-title-container").css('left', pixelsW);
-			$("#projects-title-container").css('top', pixelsH);
 		} 
 
 		$(document).ready(function() {
@@ -60,6 +47,18 @@
 				menu: '#menu',
 				scrollingSpeed: 600
 			});
+
+			var winW = window.innerWidth;
+			var winH = window.innerHeight;
+
+			var leftDistance = $("#spectra-text").offset().left;
+			var topDistance = $("#spectra-text").offset().top - (2 * winH);
+
+			var pixelsW = leftDistance + "px";
+			var pixelsH = (topDistance - 70) + "px";
+
+			$("#projects-title-container").css('left', pixelsW);
+			$("#projects-title-container").css('top', pixelsH);
 
 		});
 	</script>
