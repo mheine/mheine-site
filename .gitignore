@@ -1,4 +1,5 @@
 *.rar
 
+.htaccess
 server.pem
 simple-https-server.py

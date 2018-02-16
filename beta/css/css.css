@@ -276,7 +276,7 @@ a:active {color:#CCCCCC;}
 #spectra-text {
 	color: #CCCCCC;
 	height: 275px; /* This is hardcoded on desktop because the YT video has to have a fixed height. */
-	background-color: rgba(0, 0, 0 , 0.8);
+	background-color: rgba(0, 0, 0 , 0.5);
 }
 
 /* Spectra Mobile */
