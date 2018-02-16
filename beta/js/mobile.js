@@ -24,8 +24,8 @@ function mobile_content() {
 
 		var spectraString = $("#spectra-text").html();
 		var newSpectra = spectraString.replace(
-			"and the source code is available on GitHub.",
-			"the source code is available on GitHub and a demo can be \
+			"and the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a>.",
+			"the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
 			found <a href=\"https://youtu.be/saqd8fJADOU\">here</a>.");
 		$("#spectra-text").html(newSpectra);
 
@@ -53,9 +53,9 @@ function mobile_content() {
 		$("#spectra-div").show();
 		var spectraString = $("#spectra-text").html();
 		var newSpectra = spectraString.replace(
-			"the source code is available on GitHub and a demo can be \
-			found <a href=\"https://github.com/mheine/Spectra\">here</a>.",
-			"and the source code is available on GitHub.");
+			"the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
+			found <a href=\"https://youtu.be/saqd8fJADOU\">here</a>.",
+			"and the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a>.");
 		$("#spectra-text").html(newSpectra);
 
 		// == RCAST == // 
