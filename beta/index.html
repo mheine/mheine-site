@@ -26,7 +26,8 @@
 	<script type="text/javascript">
 
 		var loc = window.location.href + '';
-		if (loc.indexOf('http://')==0) {
+		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192.168') != -1)) {
+			console.log("Redirecting to https.")
 			window.location.href = loc.replace('http://','https://');
 		}
 		window.onload = function() {
@@ -171,7 +172,7 @@
 				<div class="intro">
 
 					<div class="projects-content-item">
-						<div id="item-title-spectra">&#8618;&#xFE0E; Spectra &emsp;</div>
+						<div id="item-title-spectra">Spectra</div>
 						
 						<div class="item-text-content" id="spectra-text">
 							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualizations such as a pulsating ball with an external wireframe to show low and medium frequencey ranges, a color scheme to match the high notes, and an independent frequency equlizer to show the entire spectrum.
@@ -196,7 +197,7 @@
 		<div class="slide" id="slide2" data-anchor="rcast">
 
 			<div class="projects-content-item">
-				<div id="item-title-rcast">&#8618;&#xFE0E; RaspberryCast &emsp;</div>
+				<div id="item-title-rcast">RaspberryCast</div>
 
 				<div class="item-text-content" id="rcast-text">
 					RaspberryCast is an open-source project for the Raspberry Pi, where you can transform your Raspberry Pi into a streaming device, and cast videos from your devices to a TV or external monitor. It supports a number of different types of streaming sites, there is an extension for both Chrome and Firefox, and there is an option to stream local video files to your Pi.
@@ -222,7 +223,7 @@
 		<!--  The photo in this slide was taken by Peter Trägårdh and was taken from MyAcademys Press Kit. Available at https://www.mynewsdesk.com/se/myacademy/images/my-academys-nulaegesbedoemning-och-utvecklingsplan-474711 -->
 
 		<div class="projects-content-item">
-			<div id="item-title-tutor">&#8618;&#xFE0E; Tutoring &emsp;</div>
+			<div id="item-title-tutor">Tutoring</div>
 
 			<div class="item-text-content" id="tutor-text">
 				<ul id="tutor-list">
@@ -243,7 +244,7 @@
 	<div class="slide" id="slide4" data-anchor="studs">
 
 		<div class="projects-content-item">
-			<div id="item-title-studs">&#8618;&#xFE0E; Studs &emsp;</div>
+			<div id="item-title-studs">Studs</div>
 
 			<div class="item-text-content" id="studs-text">
 				Studs, or the Study Trip, is an annual project at the Computer Science chapter at KTH. The project aims to create a platform for interaction between students close to graduation and relevant companies. The project ends with a study trip to give the students an opportunity to meet companies abroad.
