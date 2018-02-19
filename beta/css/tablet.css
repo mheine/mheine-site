@@ -1,0 +1,19 @@
+/* === PROJECTS TABLETS === */
+.item-text-content {
+
+	width: 530px !important;
+	height: auto !important;
+
+	font-size: 14px;
+}
+
+.item-picture-content {
+	width: 530px !important;
+	height: auto !important;
+}
+
+/* Tutoring tablet */
+
+#tutor-list  {
+	margin-left: -10px !important; 
+}

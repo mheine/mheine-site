@@ -97,78 +97,6 @@ a:hover {color:#3366BB;}
 	vertical-align: top;
 }
 
-/* === ABOUT ME MOBILE === */
-
-@media only screen and (max-width: 550px) {
-	#section-about {
-		background: url('../images/self-large-3k.png') no-repeat bottom right;
-		background-size: cover;
-	}
-
-	#about-content {
-		margin-left: 5%;
-		vertical-align: top;
-		width: 80%;
-	}
-
-	#about-header {
-		color: #444;
-		font-size: 30px;
-		font-family: Edo;
-	}
-
-	.list-text {
-		display: inline-block;
-		margin-left: 35px;
-
-		font-size: 12px;
-		vertical-align: top;
-		margin-top: 2px;
-	}
-
-	.list-icon {
-		display: inline;
-		position: absolute;
-		top: 3px; 
-		vertical-align: top;
-	}
-
-	#section-about .fp-tableCell {
-		vertical-align: top !important;
-	}
-
-	#fp-nav.right {
-		right: 2px !important;
-	}
-}
-
-/* === ABOUT ME MOBILE HORIZONTAL === */
-
-@media only screen and (max-height: 450px) {
-	#section-about {
-		background: url('../images/self-large-3k.png') no-repeat bottom right;
-		background-size: cover;
-	}
-
-	#about-content {
-		margin-left: 2%;
-		width: 65%;
-	}
-
-	#about-header {
-		font-size: 30px;
-	}
-
-	#fp-nav.right {
-		right: -2px !important;
-	}
-
-	.list-text {
-		font-size: 8px;
-		margin-top: 1px;
-	}
-}
-
 /* === PROJECTS ===*/
 #section-projects {
 	text-align: center;
@@ -251,75 +179,6 @@ a:hover {color:#3366BB;}
 	width: auto;
 }
 
-/* === PROJECTS MOBILE === */
-
-@media only screen and (max-width: 550px) {
-
-	#projects-title-container {
-		top: 0% !important;
-		left: 0% !important;
-		width: 100%;
-		height: auto;
-		text-align: center;
-	}
-
-	#projects-header {
-		display: inline-block;
-		font-size: 50px;
-	}
-	
-	.item-text-content {
-		font-size: 12px;
-		width: 85%;
-		height: auto;
-	}
-
-	.item-picture-content {
-		display: inline-block;
-
-		height: auto;
-		width: 80%;
-		vertical-align: top;
-	}
-}
-
-/* === PROJECTS TABLETS === */
-@media only screen and (max-width: 1150px) and (min-width: 551px) {
-	.item-text-content {
-
-		width: 530px !important;
-		height: auto !important;
-
-		font-size: 14px;
-	}
-
-	.item-picture-content {
-		width: 530px !important;
-		height: auto !important;
-	}
-}
-
-/* === PROJECTS MOBILE HORIZONTAL === */
-@media only screen and (max-height: 450px) {
-	.item-text-content {
-		font-size: 12px;
-	}
-
-	#projects-header {
-		font-size: 32px;
-	}
-
-	#projects-title-container {
-		top: 3%;
-		left: 3%;
-	}
-
-	.fp-slidesNav.bottom {
-		bottom: -10px !important; 
-	}	
-}
-
-
 /* Spectra */
 #item-container-spectra {
 	color: #CCC;
@@ -347,24 +206,7 @@ a:hover {color:#3366BB;}
 #spectra-text a:visited {color:#3277E4;} 
 #spectra-text a:hover {color:#3366BB;} 
 
-/* Spectra Mobile */
-@media only screen and (max-width: 550px) {
-	#spectra-text {
-		height: auto !important;
-		background-color: rgba(0, 0, 0 , 0.95);
-	}
-
-
-}
-
-/* === SPECTRA MOBILE HORIZONTAL === */
-@media only screen and (max-height: 450px) {
-	#item-title-spectra {
-		font-size: 30px;
-	}
-}
-
-/* RCAST */
+/* RaspberryCast */
 #item-container-rcast {
 	color: black;
 }
@@ -391,27 +233,6 @@ a:hover {color:#3366BB;}
 	border-radius: 4px;
 }
 
-/* Rcast Mobile */
-@media only screen and (max-width: 550px) {
-
-	#item-title-rcast {
-		font-size: 30px;
-	}
-
-	#rcast-text {
-		height: auto !important;
-		background-color: rgba(255, 255, 255 , 0.6);
-	}
-}
-
-/* === RCAST MOBILE HORIZONTAL === */
-@media only screen and (max-height: 450px) {
-	#item-title-rcast {
-		font-size: 30px;
-	}
-}
-
-
 /* Studs */
 #item-container-studs {
 	color: #112255;
@@ -426,14 +247,6 @@ a:hover {color:#3366BB;}
 #studs-text {
 	color: #333;
 	background-color: rgba(255,255,255,0.6);
-}
-
-/* === STUDS MOBILE HORIZONTAL === */
-@media only screen and (max-height: 450px) {
-
-	#item-title-studs {
-		font-size: 32px;
-	}
 }
 
 /* Tutoring */
@@ -458,35 +271,6 @@ a:hover {color:#3366BB;}
 
 #tutor-list li {
 	margin: 5px 0 5px 0; 
-}
-
-/* Tutoring Mobile */
-@media only screen and (max-width: 550px) {
-
-	#tutor-list  {
-		margin-left: -10% !important; 
-	}
-}
-
-/* Tutoring tablet */
-@media only screen and (max-width: 1150px) and (min-width: 551px) {
-	
-	#tutor-list  {
-		margin-left: -10px !important; 
-	}
-
-}
-
-/* === TUTOR MOBILE HORIZONTAL === */
-@media only screen and (max-height: 450px) {
-
-	#item-title-tutor {
-		font-size: 30px;
-	}
-
-	#tutor-list  {
-		margin-left: -25px !important; 
-	}
 }
 
 
