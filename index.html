@@ -9,7 +9,7 @@
 
 	<title>Marcus Heine</title>
 
-	<link rel="icon" href="../images/favicon.ico">
+	<link rel="icon" href="images/favicon.ico">
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -31,7 +31,7 @@
 		var loc = window.location.href + '';
 		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
 			console.log("Redirecting to https.")
-			//window.location.href = loc.replace('http://','https://');
+			window.location.href = loc.replace('http://','https://');
 		}
 		window.onload = function() {
 			resize_content();
@@ -104,6 +104,8 @@
 		<div class="section" id="section-title">
 			<div id="first-content">
 				<div id="title">Marcus Heine</div>
+
+				<div style="display:none;"><img src="images/self-thumb.png" style="display:none;" ></div>
 				
 				<div id="contact-content">
 
