@@ -2,68 +2,267 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="Cache-control" content="public">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv=”Refresh” content=”0;URL=https://mheine.se” />
+	<meta name="description" content="Marcus Heine personal webpage on the Internet" />
+	<meta name="keywords"  content="marcus,heine,mheine,personal,programmer,ai,nlp" />
+
 	<title>Marcus Heine</title>
-	<link rel="stylesheet" href="css/main_css.css">
-	<link rel="icon" href="images/favicon.ico">
-	<script src="js/jquery.min.js"></script>
+
+	<link rel="icon" href="../images/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 551px)" href="css/tablet.css">
+	<link rel="stylesheet" media="screen and (max-width: 550px)" href="css/mobile.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+	<script type="text/javascript" src="js/mobile.js"></script>
 
 	<script type="text/javascript">
 
 		var loc = window.location.href + '';
-		if (loc.indexOf('http://')==0) {
-			window.location.href = loc.replace('http://','https://');
+		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
+			console.log("Redirecting to https.")
+			//window.location.href = loc.replace('http://','https://');
 		}
+		window.onload = function() {
+			resize_content();
+		} 
+
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['name', 'aboutMe', 'projects'],
+				slidesNavigation: true,
+				loopHorizontal: false,
+				touchSensitivity: 15,
+				navigation: true,
+				navigationPosition: 'right',
+				verticalCentered: true,
+				recordHistory: false,
+				navigationTooltips: ['My name', 'About me', 'Projects'],
+				menu: '#menu',
+				scrollingSpeed: 600
+			});
+
+			var winW = window.innerWidth;
+			var winH = window.innerHeight;
+
+			if(winW > 550 && winH > 450) {
+				var leftDistance = $("#spectra-text").offset().left;
+				var topDistance = $("#spectra-text").offset().top - (2 * winH);
+
+				var pixelsW = leftDistance + "px";
+				var pixelsH = (topDistance - 70) + "px";
+
+				$("#projects-title-container").css('left', pixelsW);
+				$("#projects-title-container").css('top', pixelsH);
+			}
+
+		});
 	</script>
+
+	<style type="text/css">
+	.fp-slidesNav.bottom {
+		bottom: 25px; 
+	}
+
+	.fp-slidesNav {
+		text-align: center;
+	}
+
+	/* Slides navigation themes */
+	.fp-viewing-projects-spectra .fp-slidesNav ul li a span {
+		background: #FFF;
+	}
+
+	.fp-viewing-projects-studs .fp-slidesNav ul li a span {
+		background: #444;
+	}
+
+	.fp-viewing-projects-rcast .fp-slidesNav ul li a span {
+		background: #111;
+	}
+
+	.fp-viewing-projects-tutoring .fp-slidesNav ul li a span {
+		background: #EEE;
+	}
+
+</style>
+
 </head>
 
 <body>
+	<div id="fullpage">
+		<div class="section" id="section-title">
+			<div id="first-content">
+				<div id="title">Marcus Heine</div>
+				
+				<div id="contact-content">
 
-	<div id="container">
 
-		<div id=header>
-			Marcus Heine
-		</div>
-
-		<div id=nav>
-			<ul>
-				<li class=social_icons><a href="https://www.facebook.com/Marcus.Heine" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
-				<li class=social_icons><a href="https://github.com/mheine" target="_blank"><img src="images/github.png" alt="GitHub"></a></li>
-				<li class=social_icons><a href="http://www.linkedin.com/pub/marcus-heine/77/377/503" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
-				<li class=social_icons><a href="https://plus.google.com/109865307615306711824" target="_blank"><img src="images/google+.png" alt="Google+"></a></li>
-				<li class=social_icons><a href="https://twitter.com/MarcusHeine" target="_blank"><img src="images/twitter.png" alt="Twitter"></a></li>
-				<ul>
-				</div>
-
-				<div id=main>
-					<div class="main-text">
-
-						My name is Marcus Heine and I am a student at KTH (The Royal Institute of Technology) in Stockholm, where I'm studying Computer Science. 
-
-						<br> <br>
-
-						I currently work part-time at <a href="http://www.dewire.com/" target="_blank">Dewire</a> since the summer of 2016. I've worked with web development (Java EE, HTML, CSS and Javascript) and Continous Delivery/Integration (Docker, Gerrit, Jenkins and SonarQube).
-
-						<br> <br>
-
-						I have worked part-time at <a href="http://myacademy.se/" target="_blank">MyAcademy</a>, a Swedish company <br>
-						that provides studying guidance for young students. <br> <br>
-
-						If you're interested you can contact me by <a href="mailto:marcus.r.heine@gmail.com">mail</a>, and my <br>
-						CV is available <a href="files/CV.pdf" target="_blank">here</a>.
+					<div class="icon-listing">
+						<div id="icon-item"><a href="mailto:mail@mheine.se" target="_top"><img class="title-icon" src="images/icon-mail.png"></a></div>
 					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item">
+							<a href="https://www.linkedin.com/pub/marcus-heine/77/377/503" target="_blank"><img class="title-icon" src="images/icon-linkedin.png"></a>
+						</div>
+					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item"><a href="https://github.com/mheine" target="_blank"><img class="title-icon" src="images/icon-github.png"></a></div>
+					</div>
+
+					<div class="icon-listing">
+						<div id="icon-item"><a href="https://twitter.com/MarcusHeine" target="_blank"><img class="title-icon" src="images/icon-twitter.png"></a></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="section" id="section-about">
+
+			<div id="about-content">
+				<div id="about-header">
+					About me
+				</div>
+				<div class="listing">
+					<div class="list-icon"><img src="images/icon-education.png"></div>
+					<div class="list-text">Currently studying Computer Science @ KTH Royal Institute of Technology.</div>
 				</div>
 
-				<div id=portrait>
-					<img id="m-image" src="images/marcus.png"/>
+				<div class="listing">
+					<div class="list-icon"><img src="images/icon-work.png"></div>
+					<div class="list-text">Work experience includes developing software for <a href="https://www.dewire.com">Dewire</a> and non-profit work for <a href="https://www.datasektionen.se">Datasektionen</a>.</div>
 				</div>
 
+				<div class="listing">
+					<div class="list-icon"><img src="images/icon-programming.png"></div>
+					<div class="list-text">My preferred programming languages are Java and Python. Areas of specific interest are Natural Language Processing, Artificial Technology and Voice Recognition.</div>
+				</div>
+
+
+				<div class="listing">
+					<div class="list-icon"><img src="images/icon-heart.png"></div>
+					<div class="list-text">Some of my other hobbies include playing football, skateboarding and tinkering with my Raspberry Pi.</div>
+				</div>  
+
+				<div class="listing">
+					<div class="list-icon"><img src="images/icon-home.png"></div>
+					<div class="list-text" id="last-item-about-list">I currently live in Stockholm, Sweden.</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="section" id="section-projects">
+
+			<div id="projects-title-container">
+				<div id="projects-header">Projects</div>
 			</div>
 
-			<script src="js/script.js"></script>
+			<div class="slide" id="slide1" data-anchor="spectra">
+				<div class="intro">
 
-		</body>
+					<div class="projects-content-item">
+						<div id="item-title-spectra">Spectra</div>
+						
+						<div class="item-text-content" id="spectra-text">
+							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualizations such as a pulsating ball with an external wireframe to show low and medium frequency ranges, a color scheme to match the high notes, and an independent frequency equalizer to show the entire spectrum.
+							<br> <br>
+							The project was developed with two of my classmates, and the source code is available on <a href="https://github.com/mheine/Spectra">GitHub</a>.
+						</div>
+
+						<div class="item-picture-content" id="spectra-div">
+							<iframe
+							id="spectra-video" 
+							width="530"
+							height="275"
+							src="https://www.youtube.com/embed/saqd8fJADOU"
+							frameborder="0"
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide" id="slide2" data-anchor="rcast">
+
+			<div class="projects-content-item">
+				<div id="item-title-rcast">RaspberryCast</div>
+
+				<div class="item-text-content" id="rcast-text">
+					<a href="https://github.com/vincelwt/RaspberryCast">RaspberryCast</a> is an open-source project for the Raspberry Pi, where you can transform your Raspberry Pi into a streaming device, and cast videos from your devices to a TV or external monitor. It supports a number of different types of streaming sites, there is an extension for both Chrome and Firefox, and there is an option to stream local video files to your Pi.
+					<br> <br>
+					The application was originally developed and maintained by Vincent Loewert (@vincelwt), and I have since made several contributions, as well as discussing the future of the project.
+				</div>
+
+				<div class="item-picture-content"  id="rcast-div">
+					<iframe 
+					id="rcast-video" 
+					width="530" 
+					height="275"
+					src="https://www.youtube.com/embed/0wEcYPSm_f8"
+					frameborder="0"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide" id="slide3" data-anchor="tutoring">
+
+		<!--  The photo in this slide was taken by Peter Trägårdh and was taken from MyAcademys Press Kit. Available at https://www.mynewsdesk.com/se/myacademy/images/my-academys-nulaegesbedoemning-och-utvecklingsplan-474711 -->
+
+		<div class="projects-content-item">
+			<div id="item-title-tutor">Tutoring</div>
+
+			<div class="item-text-content" id="tutor-text">
+				<ul id="tutor-list">
+					<li>Worked at <a href="https://myacademy.se">MyAcademy</a> for 4 years, where I was a study coach with focus on students taking natural science courses. </li>
+					<li>Held a series of lectures on Object-oriented Programming to the Computer Science students at <a href="https://www.nacka.se/valfard-skola/nacka-gymnasium/">Nacka Gymnasium</a>.</li>
+					<li>Took part in a project group at the <a href="https://intra.csc.kth.se/">CSC School at KTH</a> designed to teach younger children about code and programming.</li>
+					<li>Was a mentor at the reception for new students coming to <a href="https://datasektionen.se">Datasektionen</a> at KTH for two years.</li>
+				</ul>
+			</div>
+
+			<div class="item-picture-content">
+				<a href="images/my-academy-large.png"><img class="project-picture" id="tutor-image" src="images/my-academy-large.png"></a>
+			</div>
+		</div>
+	</div>
 
 
-		</html>
+	<div class="slide" id="slide4" data-anchor="studs">
+
+		<div class="projects-content-item">
+			<div id="item-title-studs">Studs</div>
+
+			<div class="item-text-content" id="studs-text">
+				<a href="https://studieresan.se">Studs</a>, or the Study Trip, is an annual project at the Computer Science chapter at KTH. The project aims to create a platform for interaction between students close to graduation and relevant companies. The project ends with a study trip to give the students an opportunity to meet companies abroad.
+				<br> <br>
+				I was part of the project in 2017, where I was an event manager, handling communication between Studs and the companies in order to plan, attend, and evaluate the events with these companies, as well as making them as enjoyable and fruitful as possible.
+			</div>
+
+			<div class="item-picture-content">
+				<a href="images/studs-large.png"><img class="project-picture" id="studs-image" src="images/studs-large.png"></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>	
+</body>
+
+
+</html>
