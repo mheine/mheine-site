@@ -76,8 +76,15 @@ function resize_content() {
 	}
 	//Rough outline for tablet resolution 
 	else if (w < 1150 && w > 550) {
+
 		$("#tutor-image").css('width', $('#tutor-text').width() + 28);
 		$("#studs-image").css('width', $('#studs-text').width() + 28);
+
+		$("#tutor-image").css('height', '275');
+		$("#studs-image").css('height', '275');
+
+		$("#projects-title-container").css('left', '30px');
+		$("#projects-title-container").css('top', '45px');
 		console.log("tablet resize")
 	}
 	else {
