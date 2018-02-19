@@ -9,6 +9,30 @@ var addEvent = function(object, type, callback) {
 	}
 };
 
+function apply_content() {
+	var winW = window.innerWidth;
+	var winH = window.innerHeight;
+
+	if(winW > 550 && winH > 450) {
+
+		var imageUrl = "../images/space-large.jpg"
+		$('#section-title').css('background-image', 'url(' + imageUrl + ')');
+
+		var leftDistance = $("#spectra-text").offset().left;
+		var topDistance = $("#spectra-text").offset().top - (2 * winH);
+
+		var pixelsW = leftDistance + "px";
+		var pixelsH = (topDistance - 70) + "px";
+
+		$("#projects-title-container").css('left', pixelsW);
+		$("#projects-title-container").css('top', pixelsH);
+	}
+	else {
+		var imageUrl = "../images/space-small.jpg"
+		$('#section-title').css('background-image', 'url(' + imageUrl + ')');
+	}
+}
+
 function resize_content() {
 	var w = window.innerWidth;
 	var h = window.innerHeight;

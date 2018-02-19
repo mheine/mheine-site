@@ -52,19 +52,7 @@
 				scrollingSpeed: 600
 			});
 
-			var winW = window.innerWidth;
-			var winH = window.innerHeight;
-
-			if(winW > 550 && winH > 450) {
-				var leftDistance = $("#spectra-text").offset().left;
-				var topDistance = $("#spectra-text").offset().top - (2 * winH);
-
-				var pixelsW = leftDistance + "px";
-				var pixelsH = (topDistance - 70) + "px";
-
-				$("#projects-title-container").css('left', pixelsW);
-				$("#projects-title-container").css('top', pixelsH);
-			}
+			apply_content();
 
 		});
 	</script>
@@ -239,7 +227,7 @@
 			</div>
 
 			<div class="item-picture-content">
-				<a href="images/my-academy-large.png"><img class="project-picture" id="tutor-image" src="images/my-academy-large.png"></a>
+				<a href="images/my-academy-large.png"><img class="project-picture" id="tutor-image" src="images/ma-medium.jpg"></a>
 			</div>
 		</div>
 	</div>
@@ -257,7 +245,7 @@
 			</div>
 
 			<div class="item-picture-content">
-				<a href="images/studs-large.png"><img class="project-picture" id="studs-image" src="images/studs-large.png"></a>
+				<a href="images/studs-large.png"><img class="project-picture" id="studs-image" src="images/studs-medium.jpg"></a>
 			</div>
 		</div>
 	</div>
