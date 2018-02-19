@@ -11,9 +11,9 @@
 
 	<link rel="icon" href="../images/favicon.ico">
 
-	<link rel="stylesheet" href="css/css.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/css.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -27,15 +27,12 @@
 	<script type="text/javascript">
 
 		var loc = window.location.href + '';
-		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192.168') != -1)) {
+		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
 			console.log("Redirecting to https.")
-			window.location.href = loc.replace('http://','https://');
+			//window.location.href = loc.replace('http://','https://');
 		}
 		window.onload = function() {
-			$("#tutor-image").css('height', $('#tutor-text').height() + 18);
-			$("#studs-image").css('height', $('#studs-text').height() + 18);
-
-			mobile_content();
+			resize_content();
 		} 
 
 		$(document).ready(function() {
@@ -56,20 +53,22 @@
 			var winW = window.innerWidth;
 			var winH = window.innerHeight;
 
-			var leftDistance = $("#spectra-text").offset().left;
-			var topDistance = $("#spectra-text").offset().top - (2 * winH);
+			if(winW > 550 && winH > 450) {
+				var leftDistance = $("#spectra-text").offset().left;
+				var topDistance = $("#spectra-text").offset().top - (2 * winH);
 
-			var pixelsW = leftDistance + "px";
-			var pixelsH = (topDistance - 70) + "px";
+				var pixelsW = leftDistance + "px";
+				var pixelsH = (topDistance - 70) + "px";
 
-			$("#projects-title-container").css('left', pixelsW);
-			$("#projects-title-container").css('top', pixelsH);
+				$("#projects-title-container").css('left', pixelsW);
+				$("#projects-title-container").css('top', pixelsH);
+			}
 
 		});
 	</script>
 
 	<style type="text/css">
-	.fp-slidesNav.bottom{
+	.fp-slidesNav.bottom {
 		bottom: 25px; 
 	}
 
@@ -176,7 +175,7 @@
 						<div id="item-title-spectra">Spectra</div>
 						
 						<div class="item-text-content" id="spectra-text">
-							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualizations such as a pulsating ball with an external wireframe to show low and medium frequencey ranges, a color scheme to match the high notes, and an independent frequency equlizer to show the entire spectrum.
+							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualizations such as a pulsating ball with an external wireframe to show low and medium frequency ranges, a color scheme to match the high notes, and an independent frequency equalizer to show the entire spectrum.
 							<br> <br>
 							The project was developed with two of my classmates, and the source code is available on <a href="https://github.com/mheine/Spectra">GitHub</a>.
 						</div>

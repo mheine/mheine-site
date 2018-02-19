@@ -9,11 +9,14 @@ var addEvent = function(object, type, callback) {
 	}
 };
 
-function mobile_content() {
+function resize_content() {
 	var w = window.innerWidth;
 	var h = window.innerHeight;
 
-	if (w < 550 ) {
+	$("#tutor-image").css('height', $('#tutor-text').height() + 18);
+	$("#studs-image").css('height', $('#studs-text').height() + 18);
+
+	if (w < 550 || h < 600) {
 
 		// == ABOUT == //
 		/* TODO - How much of an ugly-hack is this? better way to wrap content?*/ 
@@ -47,6 +50,12 @@ function mobile_content() {
 		$("#studs-image").hide();
 
 	}
+	//Rough outline for tablet resolution 
+	else if (w < 1150 && w > 550) {
+		$("#tutor-image").css('width', $('#tutor-text').width() + 28);
+		$("#studs-image").css('width', $('#studs-text').width() + 28);
+		console.log("tablet resize")
+	}
 	else {
 
 		// == SPECTRA == //
@@ -78,5 +87,5 @@ function mobile_content() {
 }
 
 
-addEvent(window, "resize", mobile_content);
-addEvent(window, "load", mobile_content);
+addEvent(window, "resize", resize_content);
+addEvent(window, "load", resize_content);
