@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Cache-control" content="public">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Marcus Heine personal webpage on the Internet" />
+	<meta name="description" content="Marcus Heine - I'm a developer, skateboarder and a nerd in general. Come say hello!" />
 	<meta name="keywords"  content="marcus,heine,mheine,personal,programmer,ai,nlp" />
 
-	<title>Marcus Heine</title>
+	<meta property="og:image" content="https://mheine.se/images/self-thumb.jpg" />
+	<meta property="og:url" content="https://mheine.se" />
+	<meta property="og:description" content="Hi! I'm Marcus. I'm (not just) a developer. Come say hello!" />
+	<meta property="og:title" content="Marcus Heine - Home" />
+
+
+	<title>Marcus Heine - Home</title>
 
 	<link rel="icon" href="images/favicon.ico">
 
@@ -49,7 +54,20 @@
 				recordHistory: false,
 				navigationTooltips: ['My name', 'About me', 'Projects'],
 				menu: '#menu',
-				scrollingSpeed: 600
+				scrollingSpeed: 600,
+				onLeave: function(index, nextIndex, direction){ 
+					switch(nextIndex) {
+						case 1:
+							document.title = "Home - Marcus Heine";
+							break;
+						case 2:
+							document.title = "About Me - Marcus Heine";
+							break;
+						case 3:
+							document.title = "Projects - Marcus Heine";
+							break;
+					}
+				},
 			});
 
 			apply_content();
@@ -92,8 +110,6 @@
 		<div class="section" id="section-title">
 			<div id="first-content">
 				<div id="title">Marcus Heine</div>
-
-				<div style="display:none;"><img src="images/self-thumb.png" style="display:none;" ></div>
 				
 				<div id="contact-content">
 
