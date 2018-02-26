@@ -36,7 +36,7 @@
 		var loc = window.location.href + '';
 		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
 			console.log("Redirecting to https.")
-			//window.location.href = loc.replace('http://','https://');
+			window.location.href = loc.replace('http://','https://');
 		}
 		
 		window.onload = function() {

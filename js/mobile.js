@@ -39,14 +39,6 @@ function resize_content() {
 	var w = Math.max(window.innerWidth, document.documentElement.clientWidth);
 	var h = Math.max(window.innerHeight, document.documentElement.clientHeight);
 
-	$( ".underlined" ).each(function() {
-		var colArray = $(this).css('color').match(/\d+/g);
-		$(this).css('border-color', "rgba(" + colArray[0] + ", " + colArray[1] + ", " + colArray[2] +", 0.15)");
-		console.log("Color is " + colArray );
-	});
-
-
-
 	$("#tutor-image").css('height', $('#tutor-text').height() + 18);
 	$("#studs-image").css('height', $('#studs-text').height() + 18);
 
@@ -61,9 +53,9 @@ function resize_content() {
 
 		var spectraString = $("#spectra-text").html();
 		var newSpectra = spectraString.replace(
-			"and the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a>.",
-			"the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
-			found <a href=\"https://youtu.be/saqd8fJADOU\">here</a>.");
+			"and the source code is available on <a class=\"underlined\" href=\"https://github.com/mheine/Spectra\">GitHub</a>.",
+			"the source code is available on <a class=\"underlined\" href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
+			found <a class=\"underlined\" href=\"https://youtu.be/saqd8fJADOU\">here</a>.");
 		$("#spectra-text").html(newSpectra);
 
 		// == RCAST == // 
@@ -73,7 +65,7 @@ function resize_content() {
 		if (!rcastString.includes("0wEcYPSm_f8")) {
 			newRcast = rcastString.concat(
 				"A demo of the browser extension in action can \
-				be found <a href=\"https://youtu.be/0wEcYPSm_f8\">here</a>.");
+				be found <a class=\"underlined\" href=\"https://youtu.be/0wEcYPSm_f8\">here</a>.");
 		}
 		$("#rcast-text").html(newRcast);
 
@@ -95,7 +87,6 @@ function resize_content() {
 
 		$("#projects-title-container").css('left', '30px');
 		$("#projects-title-container").css('top', '45px');
-		console.log("tablet resize")
 	}
 	else {
 
@@ -103,9 +94,9 @@ function resize_content() {
 		$("#spectra-div").show();
 		var spectraString = $("#spectra-text").html();
 		var newSpectra = spectraString.replace(
-			"the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
-			found <a href=\"https://youtu.be/saqd8fJADOU\">here</a>.",
-			"and the source code is available on <a href=\"https://github.com/mheine/Spectra\">GitHub</a>.");
+			"the source code is available on <a class=\"underlined\" href=\"https://github.com/mheine/Spectra\">GitHub</a> and a demo can be \
+			found <a class=\"underlined\" href=\"https://youtu.be/saqd8fJADOU\">here</a>.",
+			"and the source code is available on <a class=\"underlined\" href=\"https://github.com/mheine/Spectra\">GitHub</a>.");
 		$("#spectra-text").html(newSpectra);
 
 		// == RCAST == // 
@@ -114,7 +105,7 @@ function resize_content() {
 		var rcastString = $("#rcast-text").html();
 		var newRcast = rcastString.replace(
 			"A demo of the browser extension in action can \
-			be found <a href=\"https://youtu.be/0wEcYPSm_f8\">here</a>.",
+			be found <a class=\"underlined\" href=\"https://youtu.be/0wEcYPSm_f8\">here</a>.",
 			"");
 		$("#rcast-text").html(newRcast);
 
@@ -125,6 +116,17 @@ function resize_content() {
 		$("#studs-image").show();
 
 	}
+
+	// Give each link (specified by the underlined class) a border color.
+	// Spectra and Tutoring are darker; so the alpha is slightly more prominent.
+	$( ".underlined" ).each(function() {
+		var colArray = $(this).css('color').match(/\d+/g);
+		if ($(this).parent().attr('id') == "spectra-text" || $(this).parent().is("li")) {
+			$(this).css('border-color', "rgba(" + colArray[0] + ", " + colArray[1] + ", " + colArray[2] + ", 0.3)");
+		} else {
+			$(this).css('border-color', "rgba(" + colArray[0] + ", " + colArray[1] + ", " + colArray[2] + ", 0.15)");
+		}
+	});
 }
 
 
