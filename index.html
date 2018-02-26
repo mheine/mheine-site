@@ -19,8 +19,8 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/css.css">
-	<link rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 551px)" href="css/tablet.css">
-	<link rel="stylesheet" media="screen and (max-width: 550px)" href="css/mobile.css">
+	<link rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 651px)" href="css/tablet.css">
+	<link rel="stylesheet" media="screen and (max-width: 650px)" href="css/mobile.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 		var loc = window.location.href + '';
 		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
 			console.log("Redirecting to https.")
-			window.location.href = loc.replace('http://','https://');
+			//window.location.href = loc.replace('http://','https://');
 		}
 		
 		window.onload = function() {
@@ -59,19 +59,20 @@
 				onLeave: function(index, nextIndex, direction){ 
 					switch(nextIndex) {
 						case 1:
-							document.title = "Home - Marcus Heine";
-							break;
+						document.title = "Home - Marcus Heine";
+						break;
 						case 2:
-							document.title = "About Me - Marcus Heine";
-							break;
+						document.title = "About Me - Marcus Heine";
+						break;
 						case 3:
-							document.title = "Projects - Marcus Heine";
-							break;
+						document.title = "Projects - Marcus Heine";
+						break;
 					}
 				},
 			});
 
 			apply_content();
+			resize_content();
 
 		});
 	</script>
@@ -150,7 +151,7 @@
 
 				<div class="listing">
 					<div class="list-icon"><img src="images/icon-work.png"></div>
-					<div class="list-text">Work experience includes developing software for <a href="https://www.dewire.com">Dewire</a> and non-profit work for <a href="https://www.datasektionen.se">Datasektionen</a>.</div>
+					<div class="list-text">Work experience includes developing software for <a class="underlined" href="https://www.dewire.com">Dewire</a> and non-profit work for <a class="underlined" href="https://www.datasektionen.se">Datasektionen</a>.</div>
 				</div>
 
 				<div class="listing">
@@ -186,7 +187,7 @@
 						<div class="item-text-content" id="spectra-text">
 							Spectra is a 3D music vizualizer written in C#. It was originally designed as a part of a course in Interaction Programming at KTH, but was later expanded for a more versatile user experience. The project uses a number of visualizations such as a pulsating ball with an external wireframe to show low and medium frequency ranges, a color scheme to match the high notes, and an independent frequency equalizer to show the entire spectrum.
 							<br> <br>
-							The project was developed with two of my classmates, and the source code is available on <a href="https://github.com/mheine/Spectra">GitHub</a>.
+							The project was developed with two of my classmates, and the source code is available on <a class="underlined" href="https://github.com/mheine/Spectra">GitHub</a>.
 						</div>
 
 						<div class="item-picture-content" id="spectra-div">
@@ -209,7 +210,7 @@
 				<div id="item-title-rcast">RaspberryCast</div>
 
 				<div class="item-text-content" id="rcast-text">
-					<a href="https://github.com/vincelwt/RaspberryCast">RaspberryCast</a> is an open-source project for the Raspberry Pi, where you can transform your Raspberry Pi into a streaming device, and cast videos from your devices to a TV or external monitor. It supports a number of different types of streaming sites, there is an extension for both Chrome and Firefox, and there is an option to stream local video files to your Pi.
+					<a class="underlined" href="https://github.com/vincelwt/RaspberryCast">RaspberryCast</a> is an open-source project for the Raspberry Pi, where you can transform your Raspberry Pi into a streaming device, and cast videos from your devices to a TV or external monitor. It supports a number of different types of streaming sites, there is an extension for both Chrome and Firefox, and there is an option to stream local video files to your Pi.
 					<br> <br>
 					The application was originally developed and maintained by Vincent Loewert (@vincelwt), and I have since made several contributions, as well as discussing the future of the project.
 				</div>
@@ -236,10 +237,10 @@
 
 			<div class="item-text-content" id="tutor-text">
 				<ul id="tutor-list">
-					<li>Worked at <a href="https://myacademy.se">MyAcademy</a> for 4 years, where I was a study coach with focus on students taking natural science courses. </li>
-					<li>Held a series of lectures on Object-oriented Programming to the Computer Science students at <a href="https://www.nacka.se/valfard-skola/nacka-gymnasium/">Nacka Gymnasium</a>.</li>
-					<li>Took part in a project group at the <a href="https://intra.csc.kth.se/">CSC School at KTH</a> designed to teach younger children about code and programming.</li>
-					<li>Was a mentor at the reception for new students coming to <a href="https://datasektionen.se">Datasektionen</a> at KTH for two years.</li>
+					<li>Worked at <a class="underlined" href="https://myacademy.se">MyAcademy</a> for 4 years, where I was a study coach with focus on students taking natural science courses. </li>
+					<li>Held a series of lectures on Object-oriented Programming to the Computer Science students at <a class="underlined" href="https://www.nacka.se/valfard-skola/nacka-gymnasium/">Nacka Gymnasium</a>.</li>
+					<li>Took part in a project group at the <a class="underlined" href="https://intra.csc.kth.se/">CSC School at KTH</a> designed to teach younger children about code and programming.</li>
+					<li>Was a mentor at the reception for new students coming to <a class="underlined" href="https://datasektionen.se">Datasektionen</a> at KTH for two years.</li>
 				</ul>
 			</div>
 
@@ -256,7 +257,7 @@
 			<div id="item-title-studs">Studs</div>
 
 			<div class="item-text-content" id="studs-text">
-				<a href="https://studieresan.se">Studs</a>, or the Study Trip, is an annual project at the Computer Science chapter at KTH. The project aims to create a platform for interaction between students close to graduation and relevant companies. The project ends with a study trip to give the students an opportunity to meet companies abroad.
+				<a class="underlined" href="https://studieresan.se">Studs</a>, or the Study Trip, is an annual project at the Computer Science chapter at KTH. The project aims to create a platform for interaction between students close to graduation and relevant companies. The project ends with a study trip to give the students an opportunity to meet companies abroad.
 				<br> <br>
 				I was part of the project in 2017, where I was an event manager, handling communication between Studs and the companies in order to plan, attend, and evaluate the events with these companies, as well as making them as enjoyable and fruitful as possible.
 			</div>

@@ -45,8 +45,8 @@
 
 
 #projects-title-container {
-	top: 0% !important;
-	left: 0% !important;
+	top: 0%;
+	left: 0%;
 	width: 100%;
 	height: auto;
 	text-align: center;
@@ -88,6 +88,11 @@
 	background-color: rgba(255, 255, 255 , 0.6);
 }
 
+/* Studs */
+#studs-text a:link {color:#2050EC;}
+#studs-text a:visited {color:#0030CC;} 
+#studs-text a:hover {color:#3366BB;}
+
 /* Tutoring */
 #tutor-list  {
 	margin-left: -10% !important; 
@@ -123,7 +128,7 @@
 /* === Projects (Horizontal) === */
 @media only screen and (max-height: 450px) {
 	.item-text-content {
-		font-size: 12px;
+		font-size: 2vw !important;
 	}
 
 	#projects-header {
@@ -133,6 +138,7 @@
 	#projects-title-container {
 		top: 3%;
 		left: 3%;
+		text-align: left;
 	}
 
 	.fp-slidesNav.bottom {
@@ -163,7 +169,8 @@
 	}
 
 	#tutor-list  {
-		margin-left: -25px !important; 
+		margin-left: -25px !important;
+		margin-bottom: -5px !important; 
 	}
 }
 

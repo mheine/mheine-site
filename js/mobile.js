@@ -10,16 +10,18 @@ var addEvent = function(object, type, callback) {
 };
 
 function apply_content() {
-	var winW = window.innerWidth;
-	var winH = window.innerHeight;
 
-	if(winW > 550 && winH > 450) {
+	var w = Math.max(window.innerWidth, document.documentElement.clientWidth);
+	var h = Math.max(window.innerHeight, document.documentElement.clientHeight);
+
+
+	if(w > 550 && h > 450) {
 
 		var imageUrl = "../images/space-large.jpg"
 		$('#section-title').css('background-image', 'url(' + imageUrl + ')');
 
 		var leftDistance = $("#spectra-text").offset().left;
-		var topDistance = $("#spectra-text").offset().top - (2 * winH);
+		var topDistance = $("#spectra-text").offset().top - (2 * h);
 
 		var pixelsW = leftDistance + "px";
 		var pixelsH = (topDistance - 70) + "px";
@@ -34,8 +36,16 @@ function apply_content() {
 }
 
 function resize_content() {
-	var w = window.innerWidth;
-	var h = window.innerHeight;
+	var w = Math.max(window.innerWidth, document.documentElement.clientWidth);
+	var h = Math.max(window.innerHeight, document.documentElement.clientHeight);
+
+	$( ".underlined" ).each(function() {
+		var colArray = $(this).css('color').match(/\d+/g);
+		$(this).css('border-color', "rgba(" + colArray[0] + ", " + colArray[1] + ", " + colArray[2] +", 0.15)");
+		console.log("Color is " + colArray );
+	});
+
+
 
 	$("#tutor-image").css('height', $('#tutor-text').height() + 18);
 	$("#studs-image").css('height', $('#studs-text').height() + 18);

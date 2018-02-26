@@ -16,6 +16,10 @@ a:link {color:#113388;}
 a:visited {color:#113388;} 
 a:hover {color:#3366BB;} 
 
+.underlined {
+	border-bottom: 1px solid;
+}
+
 /* === TITLE ===*/
 #section-title {
 	background-color: #1A1B1C;
@@ -248,6 +252,10 @@ a:hover {color:#3366BB;}
 	color: #333;
 	background-color: rgba(255,255,255,0.6);
 }
+
+#studs-text a:link {color:#0030CC;}
+#studs-text a:visited {color:#0030CC;} 
+#studs-text a:hover {color:#3366BB;}
 
 /* Tutoring */
 #item-container-tutor {
