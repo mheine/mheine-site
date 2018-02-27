@@ -18,9 +18,9 @@
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/css.css">
-	<link rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 651px)" href="css/tablet.css">
-	<link rel="stylesheet" media="screen and (max-width: 650px)" href="css/mobile.css">
+	<link rel="stylesheet" href="css/css.css?version=1">
+	<link rel="stylesheet" media="screen and (max-width: 1150px) and (min-width: 651px)" href="css/tablet.css?version=1">
+	<link rel="stylesheet" media="screen and (max-width: 650px)" href="css/mobile.css?version=1">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -32,12 +32,6 @@
 	<script type="text/javascript" src="js/mobile.js"></script>
 
 	<script type="text/javascript">
-
-		var loc = window.location.href + '';
-		if ((loc.indexOf('http://') == 0) && (loc.indexOf('localhost') && loc.indexOf('192') != -1)) {
-			console.log("Redirecting to https.")
-			window.location.href = loc.replace('http://','https://');
-		}
 		
 		window.onload = function() {
 			resize_content();
