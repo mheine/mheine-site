@@ -127,8 +127,19 @@ function resize_content() {
 			$(this).css('border-color', "rgba(" + colArray[0] + ", " + colArray[1] + ", " + colArray[2] + ", 0.15)");
 		}
 	});
-}
 
+	if(w > 750 && h > 450) {
+		$('.custom-control-arrows').css('display', 'block');
+		var leftDist = Math.floor(w / 2) - 100;
+
+		$('#arrow-left').css('left', leftDist + 'px');
+		$('#arrow-right').css('left', (leftDist + 160) + 'px');
+	}
+	else {
+		$('.custom-control-arrows').css('display', 'none');
+	}
+
+}
 
 addEvent(window, "resize", resize_content);
 addEvent(window, "load", resize_content);

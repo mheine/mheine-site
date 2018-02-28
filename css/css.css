@@ -309,3 +309,55 @@ a:hover {color:#3366BB;}
 	display: none !important;
 }
 
+.custom-control-arrows {
+	position: absolute;
+	bottom: 0px;
+	z-index: 5;
+	background-color: transparent;
+
+	display: none;
+}
+
+#arrow-right {
+	position: absolute;
+	bottom: 25px;
+	left: 715px;
+	
+	width: 40px;
+	height: 40px;
+}
+
+
+#arrow-left {
+	position: absolute;
+	bottom: 25px;
+	left: 550px;
+	
+	width: 40px;
+	height: 40px;
+	
+	filter: blur(0px);
+
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+
+.fp-viewing-projects-spectra #arrow-left {
+	display: none;
+}
+
+.fp-viewing-projects-studs #arrow-right {
+	display: none;
+}
+
+.fp-viewing-projects-studs .custom-control-arrows {
+	filter: invert(0.85);
+}
+
+.fp-viewing-projects-rcast .custom-control-arrows {
+	filter: invert(0.9);
+}
