@@ -11,6 +11,32 @@ var addEvent = function(object, type, callback) {
 
 function apply_content() {
 
+	$( "#arrow-right" ).click(function() {
+		console.log("right");
+		$.fn.fullpage.moveSlideRight();
+	});
+
+	$( "#arrow-left" ).click(function() {
+		console.log("left");
+		$.fn.fullpage.moveSlideLeft();
+	}); 
+
+	$( "#studs-image" ).click(function() {
+		event.stopPropagation();
+		console.log("studs-image clicked");
+		$('#studs-image-div').css('display', 'block');
+	}); 
+
+	$( "#studs-close-button" ).click(function() {
+		console.log("studs-image clicked");
+		$('#studs-image-div').css('display', 'none');
+	}); 
+
+	$( "#slide4" ).click(function() {
+		console.log("clear");
+		$('#studs-image-div').css('display', 'none');
+	}); 
+
 	var w = Math.max(window.innerWidth, document.documentElement.clientWidth);
 	var h = Math.max(window.innerHeight, document.documentElement.clientHeight);
 

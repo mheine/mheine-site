@@ -57,24 +57,17 @@
 						break;
 						case 2:
 						document.title = "About Me - Marcus Heine";
+						$('#studs-image-div').css('display', 'none');
 						break;
 						case 3:
 						document.title = "Projects - Marcus Heine";
 						break;
 					}
 				},
-			});
-
-
-			$( "#arrow-right" ).click(function() {
-				console.log("right");
-				$.fn.fullpage.moveSlideRight();
-			});
-
-			$( "#arrow-left" ).click(function() {
-				console.log("left");
-				$.fn.fullpage.moveSlideLeft();
-			}); 
+				onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+					$('#studs-image-div').css('display', 'none');
+				}
+});
 
 			apply_content();
 			resize_content();
@@ -183,6 +176,11 @@
 				<div id="projects-header">Projects</div>
 			</div>
 
+			<div id="studs-image-div">
+				<img id="studs-large-image" src="images/studs-large.png"></a>
+				<img id="studs-close-button" src="images/icons/icon-close.png">
+			</div>
+
 			<div class="custom-control-arrows">
 				<img id="arrow-left" src="images/icons/arrow-w-right.png">
 				<img id="arrow-right" src="images/icons/arrow-w-right.png">
@@ -273,7 +271,7 @@
 			</div>
 
 			<div class="item-picture-content">
-				<a href="images/studs-large.png"><img class="project-picture" id="studs-image" src="images/studs-medium.jpg"></a>
+				<img class="project-picture" id="studs-image" src="images/studs-medium.jpg">
 			</div>
 		</div>
 	</div>
