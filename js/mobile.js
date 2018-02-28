@@ -22,14 +22,17 @@ function apply_content() {
 	$( "#studs-image" ).click(function() {
 		event.stopPropagation();
 		$('#studs-image-div').css('display', 'block');
+		hideNavBarBottom();
 	}); 
 
 	$( "#studs-close-button" ).click(function() {
 		$('#studs-image-div').css('display', 'none');
+		showNavBarBottom();
 	}); 
 
 	$( "#slide4" ).click(function() {
 		$('#studs-image-div').css('display', 'none');
+		showNavBarBottom();
 	}); 
 
 	var w = Math.max(window.innerWidth, document.documentElement.clientWidth);
@@ -160,6 +163,16 @@ function resize_content() {
 		$('.custom-control-arrows').css('display', 'none');
 	}
 
+}
+
+function showNavBarBottom() {
+	$('.custom-control-arrows').css('display', 'block');
+	$('.fp-slidesNav').css('display', 'block');
+}
+
+function hideNavBarBottom() {
+	$('.custom-control-arrows').css('display', 'none');
+	$('.fp-slidesNav').css('display', 'none');
 }
 
 addEvent(window, "resize", resize_content);
